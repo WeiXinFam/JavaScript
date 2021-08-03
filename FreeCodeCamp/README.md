@@ -10,4 +10,11 @@
   - bigint
   - number
   - object
-- variables: store and manipulate data in a dynamic fashion. They do this by using a "label" to point to the data rather than using the data itself.
+- variables:
+  - store and manipulate data in a dynamic fashion. They do this by using a "label" to point to the data rather than using the data itself.
+  - JavaScript variables when declared, it has an inital value of `undefined`
+- keyword:
+  - var
+  - let
+- note:
+  - JS variables and function names are case sensitive. Best Practice is camelCase
