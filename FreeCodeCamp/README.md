@@ -18,3 +18,18 @@
   - let
 - note:
   - JS variables and function names are case sensitive. Best Practice is camelCase
+  - Not all real numbers can accurately be represented in floating point. This can lead to rounding errors.
+- operators:
+  - `+`
+  - `-`
+  - `*`
+  - `/`
+  - `%`
+    - The remainder operator is sometimes incorrectly referred to as the modulus operator. It is very similar to modulus, but does not work properly with negative numbers.
+- increment/decrement:
+  - `i++ == i=i+1`
+  - `i-- == i=i-1`
+  - `i+=5 == i=i+5`
+  - `i-=5 == i= i-5`
+  - `i*=5 == i=i*5`
+  - `i/=5 == i= i/5`
