@@ -27,9 +27,26 @@
   - `%`
     - The remainder operator is sometimes incorrectly referred to as the modulus operator. It is very similar to modulus, but does not work properly with negative numbers.
 - increment/decrement:
+
   - `i++ == i=i+1`
   - `i-- == i=i-1`
   - `i+=5 == i=i+5`
   - `i-=5 == i= i-5`
   - `i*=5 == i=i*5`
   - `i/=5 == i= i/5`
+
+- string operations:
+  - use backslash(\)
+    - to escape quote
+      - or declare the new string with single quote at the beginning and at the end, with the other conversation string as double quotes
+    - to escape character
+  - can use single or double quotes
+  - escape sequences in string
+    - `\'` single quote
+    - `\"` double qupte
+    - `\\` backslash
+    - `\n` newline
+    - `\r` carriage return
+    - `\t` tab
+    - `\b` word boundary
+    - `\f` form feed
