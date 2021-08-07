@@ -50,3 +50,8 @@
     - `\t` tab
     - `\b` word boundary
     - `\f` form feed
+  - `+` for concatenation
+  - `+=` operator to concatenate a string onto the end of an existing string variable.
+  - `<str variable>.length` to find the length of the string
+  - Use Bracket Notation to Find the First Character in a String. They are zero-based indexing
+  - String values are immutable, which means that they cannot be altered once created. Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed.
