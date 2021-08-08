@@ -66,9 +66,21 @@
     - `.pop()` is used to pop a value off of the end of an array.
     - `.shift()` works just like `.pop()`, except it removes the first element instead of the last.
     - `.unshift()` works exactly like `.push()`, but instead of adding the element at the end of the array, `unshift()` adds the element at the beginning of the array.
+  - queue: New items can be added at the back of the queue and old items are taken off from the front of the queue.
 - function
+
   - Basic structure:
     `function functionName(){}`
+  - Parameters are variables that act as placeholders for the values that are to be input to a function when it is called.
+  - The actual values that are input (or "passed") into a function when it is called are known as arguments.
+
+  - Scopes  
+    scope refers to the visibility of variables.
+    - Global: declared outside function
+    - Local: declared inside function
+    - Variables which are declared without the var keyword are automatically created in the global scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with var.
+    - It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
+    - A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined.
 
 Note:
 
