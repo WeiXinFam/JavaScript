@@ -82,6 +82,16 @@
     - It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
     - A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined.
 
+- condition
+  - basic structure
+    - `if (condition is true) { statement is executed }`
+  - comparison operators
+    - `==` equality
+      - Type Coercion: to compare two different data types, we need to convert one type to the other
+    - `===` Strict equality
+      - does not perform a type conversion.
+    - Note: In JavaScript, you can determine the type of a variable or a value with the `typeof` operator
+
 Note:
 
 - mad Lib
