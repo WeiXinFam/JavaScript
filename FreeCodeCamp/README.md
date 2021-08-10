@@ -91,6 +91,14 @@
     - `===` Strict equality
       - does not perform a type conversion.
     - Note: In JavaScript, you can determine the type of a variable or a value with the `typeof` operator
+    - `!=` inequality operator is the opposite of the equality operator. Like the equality operator, the inequality operator will convert data types of values while comparing.
+    - The strict inequality operator (`!==`) is the logical opposite of the strict equality operator.The strict inequality operator will not convert data types.
+    - Compares the values of two numbers
+      - The greater than operator (`>`). The greater than operator will convert data types of values while comparing.
+      - The greater than or equal to operator (`>=`). The greater than or equal to operator will convert data types while comparing.
+      - The less than operator (`<`). The less than operator converts data types while comparing.
+      - The less than or equal to operator (`<=`). The less than or equal to operator converts data types.
+    - `&&` logical and operator.
 
 Note:
 
