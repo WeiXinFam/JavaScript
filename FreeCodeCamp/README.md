@@ -84,7 +84,7 @@
 
 - condition
   - basic structure
-    - `if (condition is true) { statement is executed }`
+    - `if (condition is true) { statement is executed } else if (condition) else{}`
   - comparison operators
     - `==` equality
       - Type Coercion: to compare two different data types, we need to convert one type to the other
@@ -99,6 +99,7 @@
       - The less than operator (`<`). The less than operator converts data types while comparing.
       - The less than or equal to operator (`<=`). The less than or equal to operator converts data types.
     - `&&` logical and operator.
+    - `||` logical or operator
 
 Note:
 
