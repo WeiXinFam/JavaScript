@@ -103,6 +103,17 @@
       - The less than or equal to operator (`<=`). The less than or equal to operator converts data types.
     - `&&` logical and operator.
     - `||` logical or operator
+  - Objects
+    - Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+    - Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+    - if your object has any non-string properties, JavaScript will automatically typecast them as strings.
+    - There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+      - If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
+      - Another use of bracket notation on objects is to access a property which is stored as the value of a variable. This can be very useful for iterating through an object's properties or when accessing a lookup table.
+    - After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable. You can use either dot or bracket notation to update.
+    - Add new property by dot or bracket notation
+    - Delete properties eg `delete ourDog.bark;`
+    - Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to lookup values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range.
 
 Note:
 
