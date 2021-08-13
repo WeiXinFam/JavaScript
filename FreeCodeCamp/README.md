@@ -85,6 +85,9 @@
 - condition
   - basic structure
     - `if (condition is true) { statement is executed } else if (condition) else{}`
+    - When a return statement is reached, the execution of the current function stops and control returns to the calling location.
+  - switch
+    `switch (num) { case value1: statement1; break; case value2: statement2; break; ... default: defaultStatement; break; }`
   - comparison operators
     - `==` equality
       - Type Coercion: to compare two different data types, we need to convert one type to the other
