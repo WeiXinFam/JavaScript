@@ -110,10 +110,15 @@
     - There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
       - If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
       - Another use of bracket notation on objects is to access a property which is stored as the value of a variable. This can be very useful for iterating through an object's properties or when accessing a lookup table.
+      - The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
     - After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable. You can use either dot or bracket notation to update.
     - Add new property by dot or bracket notation
     - Delete properties eg `delete ourDog.bark;`
     - Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to lookup values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range.
+    - use the `.hasOwnProperty(propname)` method of objects to determine if that object has the given property name.
+  - loop
+    - while
+    - for (a; b; c), where a is the intialization statement, b is the condition statement, and c is the final expression.
 
 Note:
 
