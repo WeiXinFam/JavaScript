@@ -10,6 +10,9 @@
   - bigint
   - number
   - object
+  - type conversion:
+    - parseInt
+      - It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
 - variables:
   - store and manipulate data in a dynamic fashion. They do this by using a "label" to point to the data rather than using the data itself.
   - JavaScript variables when declared, it has an inital value of `undefined`
@@ -81,6 +84,8 @@
     - Variables which are declared without the var keyword are automatically created in the global scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with var.
     - It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
     - A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined.
+  - Recursion is the concept that a function can be expressed in terms of itself.
+    - Note: Recursive functions must have a base case when they return without calling the function again (in this example, when n <= 0), otherwise they can never finish executing.
 
 - condition
   - basic structure
@@ -103,6 +108,7 @@
       - The less than or equal to operator (`<=`). The less than or equal to operator converts data types.
     - `&&` logical and operator.
     - `||` logical or operator
+    - `a ? b : c` ternary operator
   - Objects
     - Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
     - Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
@@ -119,6 +125,10 @@
   - loop
     - while
     - for (a; b; c), where a is the intialization statement, b is the condition statement, and c is the final expression.
+    - do..while loop. Essentially, a do...while loop ensures that the code inside the loop will run at least once.
+- Random
+  - Math.random() generates a random decimal
+  - `Math.floor(Math.random() * (max - min + 1)) + min`
 
 Note:
 
