@@ -21,3 +21,30 @@ When you declare a variable with the `var` keyword, it is declared globally, or 
 The `let` keyword behaves similarly, but with some extra features. When you declare a variable with the let keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
 
 #### const declarations----------------
+
+`const` has all the awesome features that `let` has, with the added bonus that variables declared using `const` are read-only. They are a constant value, which means that once a variable is assigned with `const`, it cannot be reassigned.
+
+As you can see, trying to reassign a variable declared with `const` will throw an error. You should always name variables you don't want to reassign using the `const` keyword. This helps when you accidentally attempt to reassign a variable that is meant to stay constant. A common practice when naming constants is to use all uppercase letters, with words separated by an underscore.
+
+However, it is important to understand that objects (including arrays and functions) assigned to a variable using `const` are still mutable. Using the `const` declaration only prevents reassignment of the variable identifier. You can use `Object.freeze` to prevent data mutation.
+
+#### Notes
+
+It is common for developers to use uppercase variable identifiers for immutable values and lowercase or camelCase for mutable values (objects and arrays). In a later challenge you will see an example of a lowercase variable identifier being used for an array.
+
+### Object functions
+
+- `Object.freeze`: To ensure your data doesn't change, JavaScript provides a function Object.freeze to prevent data mutation. Once the object is frozen, you can no longer add, update, or delete properties from it. Any attempt at changing the object will be rejected without an error.
+
+### Functions
+
+In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions. We don't need to name these functions because we do not reuse them anywhere else.
+
+Usually  
+`const myFunc = function() { const myVar = "value"; return myVar; }`
+
+Arrow Function Syntax  
+`const myFunc = () => { const myVar = "value"; return myVar; }`
+
+When there is no function body, and only a return value, arrow function syntax allows you to omit the keyword return as well as the brackets surrounding the code. This helps simplify smaller functions into one-line statements:  
+`const myFunc = () => "value";`
