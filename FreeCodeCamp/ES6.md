@@ -66,3 +66,86 @@ ES6 also introduces the rest parameter for function parameters. With the rest pa
 The rest parameter eliminates the need to check the args array and allows us to apply `map()`, `filter()` and `reduce()` on the parameters array.
 
 From above, we can see that there is a similar operator called spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected. For instance, `...arr` returns an unpacked array. In other words, it spreads the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal.
+
+#### Destructing assignment
+
+Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object
+
+Given
+
+```
+const user = { name: 'John Doe', age: 34 };
+
+const name = user.name;
+const age = user.age;
+```
+
+We can use ES6 destructuring syntax
+
+```
+const { name, age } = user;
+```
+
+Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.
+
+```
+const { name: userName, age: userAge } = user;
+```
+
+We can also apply destructuring assignment to destruct values from nested objects.
+
+```
+const user = {
+  johnDoe: {
+    age: 34,
+    email: 'johnDoe@freeCodeCamp.com'
+  }
+};
+
+const { johnDoe: { age, email }} = user; // OR const { johnDoe: { age: userAge, email: userEmail }} = user;
+
+```
+
+Destructuring Arrays!  
+One key difference between the spread operator and array destructuring is that the spread operator unpacks all contents of an array into a comma-separated list. Consequently, you cannot pick or choose which elements you want to assign to variables.
+
+```
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b); //a=1, b=2
+```
+
+We can also access the value at any index in an array with destructuring by using commas to reach the desired index
+
+```
+const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c);
+```
+
+Destructing Assignment with the Rest parameter!
+
+```
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log(a, b);
+console.log(arr);
+```
+
+Result is similar to `Array.prototype.slice()`  
+Variables a and b take the first and second values from the array. After that, because of the rest parameter's presence, arr gets the rest of the values in the form of an array. The rest element only works correctly as the last variable in the list. As in, you cannot use the rest parameter to catch a subarray that leaves out the last element of the original array.
+
+Destructing Object in a function arguement!  
+Instead of
+
+```
+const profileUpdate = (profileData) => {
+  const { name, age, nationality, location } = profileData;
+
+}
+```
+
+We can actually do this instead
+
+```
+const profileUpdate = ({ name, age, nationality, location }) => {
+
+}
+```
