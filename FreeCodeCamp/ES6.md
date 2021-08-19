@@ -48,3 +48,21 @@ Arrow Function Syntax
 
 When there is no function body, and only a return value, arrow function syntax allows you to omit the keyword return as well as the brackets surrounding the code. This helps simplify smaller functions into one-line statements:  
 `const myFunc = () => "value";`
+
+#### Function Parameters
+
+If we have a single parameter, We can omit the enclosing the parentheses around the single parameter
+
+`const doubler = item => item *2`
+
+Also we can set default parameters like the following:
+
+`const greeting = (name = "Anonymous") => "Hello " + name;`
+
+ES6 also introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+
+`function howMany(...args) { return "You have passed " + args.length + " arguments."; } console.log(howMany(0, 1, 2));`
+
+The rest parameter eliminates the need to check the args array and allows us to apply `map()`, `filter()` and `reduce()` on the parameters array.
+
+From above, we can see that there is a similar operator called spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected. For instance, `...arr` returns an unpacked array. In other words, it spreads the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal.
