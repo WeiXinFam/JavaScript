@@ -49,6 +49,28 @@ Arrow Function Syntax
 When there is no function body, and only a return value, arrow function syntax allows you to omit the keyword return as well as the brackets surrounding the code. This helps simplify smaller functions into one-line statements:  
 `const myFunc = () => "value";`
 
+When defining functions, we can remove the function keyword and colon together.
+
+```
+const person = {
+  name: "Taylor",
+  sayHello: function() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+```
+
+to
+
+```
+const person = {
+  name: "Taylor",
+  sayHello() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+```
+
 #### Function Parameters
 
 If we have a single parameter, We can omit the enclosing the parentheses around the single parameter
@@ -149,3 +171,48 @@ const profileUpdate = ({ name, age, nationality, location }) => {
 
 }
 ```
+
+### Template Literals
+
+Template literals allow you to create multi-line strings and to use string interpolation features to create strings.
+
+Use backticks `` ` `` to wrap the string. And use `${variable}` syntax as a placeholder.
+
+### Object Literals
+
+Consider the following code:
+
+```
+const getMousePosition = (x, y) => ({
+  x: x,
+  y: y
+});
+```
+
+`getMousePosition` is a simple function that returns an object containing two properties. ES6 provides the syntactic sugar to eliminate the redundancy of having to write `x: x`. You can simply write `x` once, and it will be converted to `x: x` (or something equivalent) under the hood. Here is the same function from above rewritten to use this new syntax:
+
+```
+const getMousePosition = (x, y) => ({ x, y });
+```
+
+### Create Objects
+
+ES6 provides a new syntax to create objects, using the class keyword.
+
+It should be noted that the class syntax is just syntax, and not a full-fledged class-based implementation of an object-oriented paradigm, unlike in languages such as Java, Python, Ruby, etc.
+
+```
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+}
+const zeus = new SpaceShuttle('Jupiter');
+
+```
+
+It should be noted that the `class` keyword declares a new function, to which a constructor is added. This constructor is invoked when `new` is called to create a new object.
+
+Note: UpperCamelCase should be used by convention for ES6 class names, as in `SpaceShuttle` used above.
+
+The `constructor` method is a special method for creating and initializing an object created with a class.
