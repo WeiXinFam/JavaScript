@@ -216,3 +216,19 @@ It should be noted that the `class` keyword declares a new function, to which a 
 Note: UpperCamelCase should be used by convention for ES6 class names, as in `SpaceShuttle` used above.
 
 The `constructor` method is a special method for creating and initializing an object created with a class.
+
+Note: It is convention to precede the name of a private variable with an underscore (\_). However, the practice itself does not make a variable private.
+
+### Access Objects
+
+We use _getters_ and _setters_ to obtain values form an object and set the value of a property within an object. This.
+
+_getters_ - Getter functions are meant to simply return (get) the value of an object's private variable to the user without the user directly accessing the private variable.
+
+_setters_ - Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previous value completely.
+
+### Modular Script
+
+In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantage of this functionality, you need to create a script in your HTML document with a type of `module`.
+
+`<script type="module" src="filename.js"></script>`
