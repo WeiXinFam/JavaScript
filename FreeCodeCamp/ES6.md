@@ -71,6 +71,8 @@ const person = {
 };
 ```
 
+Note the function with no name, is also called anonymous function.
+
 #### Function Parameters
 
 If we have a single parameter, We can omit the enclosing the parentheses around the single parameter
@@ -261,6 +263,10 @@ OR
 export {add, subtract};
 ```
 
+These are called named exports. Next we have export default.Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.
+
+Since `export default` is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. Additionally, you cannot use `export default` with `var`, `let`, or `const`
+
 #### Import
 
 ```
@@ -268,3 +274,42 @@ import { add } from './math_functions.js';
 ```
 
 The `./` tells the import to look for the `math_functions.js` file in the same folder as the current file. The relative file path (`./`) and file extension (`.js`) are required when using import in this way.
+
+Or to import all
+
+```
+import * as myMathModule from "./math_functions.js";
+```
+
+`myMathModule` is just a variable name.
+
+If we import a default export, we need to use a different `import` syntax:
+
+```
+import add from "./math_functions.js";
+```
+
+The syntax differs in one key place. The imported value, `add`, is not surrounded by curly braces (`{}`). add here is simply a variable name for whatever the default export of the `math_functions.js` file is. You can use any name here when importing a default.
+
+### Javascript Promise
+
+you use it to make a promise to do something, usually asynchronously. When the task completes, you either fulfill your promise or fail to do so. `Promise` is a constructor function, so you need to use the `new` keyword to create one. It takes a function, as its argument, with two parameters - `resolve` and `reject`. These are methods used to determine the outcome of the promise.
+
+```
+const myPromise = new Promise((resolve, reject) => {
+
+});
+
+```
+
+A promise has three states: `pending`, `fulfilled`, and `rejected`. The promise you created in the last challenge is forever stuck in the `pending` state because you did not add a way to complete the promise. The `resolve` and `reject` parameters given to the promise argument are used to do this. `resolve` is used when you want your promise to succeed, and `reject` is used when you want it to fail.
+
+```
+const myPromise = new Promise((resolve, reject) => {
+  if(condition here) {
+    resolve("Promise was fulfilled");
+  } else {
+    reject("Promise was rejected");
+  }
+});
+```
